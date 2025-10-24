@@ -1,0 +1,150 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+body{
+    background: url('../images/ocean.jpg');
+    background-size: cover;
+    height: 100hv;
+    overflow: hidden;
+}
+
+.main__block{
+    max-width: 600px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255, 0.8);
+    padding: 40px 30px 70px;
+    margin: 100px auto 20px;
+    max-height: 70%;
+    overflow: auto;
+}
+
+.title{
+    font-family: 'Playwrite DE SAS', cursive;
+    text-align: center;
+    font-size: 30px;
+    color: #05a2ea;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.inputrow{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    height: 40px;
+}
+
+.enter__task{
+    border-radius: 10px;
+    border: 3px solid  #05a2ea;
+    height: 100%;
+    font-size: 20px;
+    width: 90%;
+}
+.btn{
+    border-radius: 10px;
+    border: 3px solid  #05a2ea;
+    width: 40px;
+    height: 100%;
+    color:  #05a2ea;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.btn:active{
+    background-color: #05a2ea;
+    color: aliceblue;
+    border: 3px solid  hsl(0, 0%, 100%);
+
+}
+
+.listoftasks {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; 
+}
+
+.listoftasks li{
+    font-size: 20px;
+    color: #05a2ea;
+    font-family: 'Playwrite DE SAS', cursive;
+    padding: 10px 10px 10px 40px;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    white-space: normal; 
+    margin-bottom: 8px; 
+    display: flex;
+    align-items: center;
+}
+
+.listoftasks li::before{
+    content:'';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #05a2ea;
+    left: 10px;
+}
+
+.listoftasks li.checked{
+    text-decoration: line-through;
+}
+
+.listoftasks li.checked:after{
+    content: '\2713';
+    position: absolute;
+    bottom: 11px;
+    left: 13px;
+}
+
+.listoftasks li span{
+    position: absolute;
+    bottom: 11px;
+    top: 5px;
+    right: 15px;
+    font-size: 20px;
+}
+
+.listoftasks li span:hover{
+    font-size: 30px;
+}
